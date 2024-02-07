@@ -14,7 +14,7 @@ app.use(shopRoutes);
 
 app.use((req, res, next) => {
     console.log(__dirname);
-    res.sendFile(path.join(__dirname, 'views', 'err404.html'));
+    res.status(404).sendFile(path.join(__dirname, 'views', 'err404.html'));
 });
 
 app.listen(3000);
